@@ -3,10 +3,16 @@
 Answer these on your own, then compare answers as a group
 
 1.  What is state?
+  - State is where we store property values for components
+  - State is data that is managed by the component
+  - State is an object in React, so we must treat it as such (this.state.name)
 
 2.  Where do you set initial state?
+  - In the component's constructor under where we call super
 
 3.  What method do you use to update state?
+  - We use the setState method
+  - When we call the setState method, we need to send in an object that specifies our targeted properties that need changed along with their new values
 
 ### Understand
 
@@ -18,8 +24,8 @@ Discuss this question in pairs if you have a 4-person group
 import React, { Component } from "react";
 
 class LeadMentor extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       questionsAnswered: 0
@@ -40,6 +46,11 @@ class LeadMentor extends Component {
   }
 }
 ```
+
+  - The code is creating a component called LeadMentor.
+  - LeadMentor is displaying the questionsAnswered from its state in its return
+  - The user is able to increase the amount of questionsAnswered held in state by invoking the handleClick method.
+  - When the state value for questionsAnswered gets updated by button click, the component rerenders showing the updated number
 
 ### Apply
 
